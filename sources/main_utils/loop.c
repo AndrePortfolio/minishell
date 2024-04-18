@@ -43,12 +43,32 @@ void	loop(t_shell *shell)
 
 void	get_prompt(t_shell *shell)
 {
+	char	*exit_status;
+	char	*program_name;
+	char	*tmp;
+	char	*prompt;
+
 	if (shell->line)
 	{
 		free(shell->line);
 		shell->line = NULL;
 	}
-	shell->line = readline("minishell$ ");
+	if (shell->status)
+		tmp = ft_strjoin(RED, "⇾ ");
+	else
+		tmp = ft_strjoin(GREEN, "⇾ ");
+	exit_status = ft_strjoin(tmp, RESET);
+	free(tmp);
+	tmp = ft_strjoin(CYAN, "minishell");
+	program_name = ft_strjoin(tmp, RESET);
+	free(tmp);
+	tmp = ft_strjoin(exit_status, program_name);
+	prompt = ft_strjoin(tmp, "$ ");
+	shell->line = readline(prompt);
+	free(exit_status);
+	free(program_name);
+	free(prompt);
+	free(tmp);
 }
 
 void	wait_pids(t_shell *shell)
