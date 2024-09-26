@@ -65,4 +65,4 @@ Executor: Executes commands, handling built-ins and external programs by going t
 
 This project taught us valuable lessons in parsing, memory management, and system calls. By recreating bash, we gained a deeper understanding of how shells interact with the operating system and manage user commands effectively.
 
-Built with love together with [@Btk](https://github.com/btoksoez))
+Built with love together with [Benian](https://github.com/btoksoez)
