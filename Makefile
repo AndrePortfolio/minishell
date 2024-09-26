@@ -28,7 +28,7 @@ SRC += $(addprefix sources/5.signals/,$(SRC_5_signals))
 SRC += $(addprefix sources/main_utils/,$(SRC_main_utils))
 SRC += $(addprefix sources/,$(SRC_main))
 
-OBJ := $(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
+OBJ = $(SRC:$(SRC_DIRECTORY)/%.c=$(OBJ_DIR)/%.o)
 
 # Colours
 GREEN = \033[1;32m
